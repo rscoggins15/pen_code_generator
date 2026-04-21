@@ -192,7 +192,7 @@ abbreviations = {
     "TREATMENT FOR VARIOUS EDGE CONDITIONS": "EDGE_CON",
     "TYPICAL SECTIONS": "TYP",
     "GENERAL NOTES": "G_NOTES",
-    "ESTIMATE AND QUANTITY SHEETS": "EQ",
+    "ESTIMATE AND QUANTITY SHEET": "EQ",
     "ENVIRONMENTAL PERMITS, ISSUES AND COMMITMENTS (EPIC)": "EPIC",
     "STORMWATER POLLUTION PREVENTION PLAN (SW3P)": "SW3P"
 }
@@ -311,7 +311,7 @@ BEGIN_STRINGS
         category = row['category']
         # Write category header if it's new and not NaN
         if pd.notna(category) and category != current_category:
-            f.write(f'<{category} SECTION>\n')
+            f.write(f'\n<{category} SECTION>\n\n')
             current_category = category
         
         sht_num = row['sht_num']
@@ -319,6 +319,11 @@ BEGIN_STRINGS
             description = row['description']
             # Apply abbreviations
             description = get_abbreviated_description(description)
+            
+            # Add blank line before if more than 1 sheet
+            # if int(sht_num) > 1:
+            #     f.write('\n')
+            
             if "THRU" in description:
                 # Use thru_logic to generate all instances
                 thru_dict = thru_logic(description, counter + 1)
@@ -335,6 +340,10 @@ BEGIN_STRINGS
                     else:
                         line = f'\t"${description}$" = "{int(counter)}"'
                     f.write(line + '\n')
+            
+            # Add blank line after if more than 1 sheet
+            if int(sht_num) > 1:
+                f.write('\n')
     
     # Write footer
     f.write('END_STRINGS\n')

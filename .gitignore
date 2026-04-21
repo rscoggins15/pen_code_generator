@@ -1,4 +1,6 @@
 /build
 /main.spec
-/pen_table_renumber.py
+# /pen_table_renumber.py
 /venv
+/pen_table_renumber.spec
+/main.spec
