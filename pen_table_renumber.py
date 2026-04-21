@@ -38,7 +38,7 @@ def renumber_after_general_section(
         for line in infile:
 
             # Detect the boundary where renumbering begins
-            if "<GENERAL SECTION>" in line:
+            if "<GENERAL SECTION>" in line or "<Comments>GENERAL SECTION</Comments>" in line:
                 renumbering_active = True
                 output_lines.append(line)
                 continue
@@ -73,6 +73,6 @@ def renumber_after_general_section(
 if __name__ == "__main__":
     renumber_after_general_section(
         input_path=pen_tbl,
-        output_path=pen_tbl.replace(".tbl", "_renumbered.tbl"),
+        output_path=pen_tbl.replace(".tbl", "-1.tbl"),
         start_number=1
     )
