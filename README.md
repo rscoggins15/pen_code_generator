@@ -3,7 +3,7 @@
 A Python application that generates a PEN TABLE file from Excel Index of Sheets (IOS) data.
 
 ## Download
-[Windows exe](https://github.com/rscoggins15/pen_code_generator/blob/main/dist/main.exe?raw=1){target="_blank"}
+<a target="_blank" rel="relation_name" href="https://github.com/rscoggins15/pen_code_generator/blob/main/dist/main.exe?raw=1">Windows exe</a>
 
 ## Overview
 
