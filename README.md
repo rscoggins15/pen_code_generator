@@ -2,6 +2,9 @@
 
 A Python application that generates a PEN TABLE file from Excel Index of Sheets (IOS) data.
 
+## Download
+[Windows exe](https://github.com/rscoggins15/pen_code_generator/blob/main/dist/main.exe?raw=1)
+
 ## Overview
 
 This program reads project information from an Excel file and generates formatted PEN table (.tbl) with dynamic variable substitution. It provides a user-friendly GUI for entering project details and automatically processes sheet data with support for description ranges (THRU patterns) and abbreviations.
