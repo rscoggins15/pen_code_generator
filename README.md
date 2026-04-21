@@ -11,7 +11,7 @@ This program reads project information from an Excel file and generates formatte
 
 ## Usage
 
-You will need the IOS excel file in addition to the executable. In this file, there are three named columns contained in row A (which is hidden). These enable the program to read the index of sheets. Please use the included IOS sheet as a starting template while you create your index of sheets. Otherwise, you will need to add this row into an existing excel sheet. 
+You will need the Index Of Sheets excel file in addition to the executable. In this file, there are three named columns contained in row A (which is hidden). These enable the program to read the Index Of Sheets. Please use the included Index Of Sheets as a starting template while you create your index of sheets. Otherwise, you will need to add this row into an existing excel sheet. 
 
 ## Features
 
